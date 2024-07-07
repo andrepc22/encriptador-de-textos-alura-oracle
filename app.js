@@ -52,3 +52,11 @@ function desencriptar(texto) {
 
   return resultado;
 }
+
+// Funcionalidad copiar
+
+function copiarClipboard() {
+  const texto = document.getElementById("outputTexto").value;
+  navigator.clipboard.writeText(texto);
+  console.log(texto);
+}
