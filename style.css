@@ -1,44 +1,126 @@
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    margin: 0;
-    flex-direction: column;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #f3f5fc;
+  margin: 0;
+  flex-direction: column;
+}
+
+#a-alura {
+  align-self: flex-start;
+  margin-top: 30px;
 }
 
 h1 {
-    color: #333;
+  color: #333;
 }
 
-input, button, textarea {
-    width: 300px;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-input:focus, textarea:focus {
-    border-color: #007bff;
-    outline: none;
+.left-section,
+.right-section {
+  margin: 10px;
+}
+
+input {
+  width: 700px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 25px;
+  background: none;
+  color: #0a3871;
+}
+
+input::placeholder {
+  color: #0a3871;
+}
+
+input:focus {
+  outline: none;
 }
 
 button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
+  cursor: pointer;
+  margin-right: 10px;
+  width: 330px;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 16px;
 }
 
-button:hover {
-    background-color: #0056b3;
+.conrelleno {
+  background-color: #0a3871;
+  color: white;
+  transition: ease 0.3s;
+  border: 1px solid #0a3871;
+}
+
+.conrelleno:hover {
+  color: #0a3871;
+  background-color: #f3f5fc;
+  border: 1px solid #0a3871;
+}
+
+.sinrelleno {
+  color: #0a3871;
+  border: 1px solid #0a3871;
+  background-color: #f3f5fc;
+  transition: ease 0.3s;
+}
+
+.sinrelleno:hover {
+  background-color: #0a3871;
+  color: white;
+  border: 1px solid #0a3871;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
 }
 
 textarea {
-    resize: none;
-    height: 150px;
+  width: 300px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 16px;
+  resize: none;
+  height: 150px;
+}
+
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Ocultar inicialmente */
+
+#btncopiar,
+#outputTexto {
+  display: none;
+}
+
+#not-found {
+  display: block;
 }

@@ -3,6 +3,7 @@ function encriptarTexto() {
   const textoEncrip = encriptar(texto);
   //   console.log(textoEncrip);
   document.getElementById("outputTexto").value = textoEncrip;
+  mostrarElementos();
 }
 
 function encriptar(texto) {
@@ -38,6 +39,7 @@ function desencriptarTexto() {
   const textoEncrip = desencriptar(texto);
   //   console.log(textoEncrip);
   document.getElementById("outputTexto").value = textoEncrip;
+  mostrarElementos();
 }
 
 function desencriptar(texto) {
@@ -58,5 +60,13 @@ function desencriptar(texto) {
 function copiarClipboard() {
   const texto = document.getElementById("outputTexto").value;
   navigator.clipboard.writeText(texto);
-  console.log(texto);
+  //   console.log(texto);
+}
+
+// Mostrar elementos
+
+function mostrarElementos() {
+  document.getElementById("btncopiar").style.display = "block";
+  document.getElementById("outputTexto").style.display = "block";
+  document.getElementById("not-found").style.display = "none";
 }
