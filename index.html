@@ -11,26 +11,31 @@
     <img src="images/Logo-alura.png" alt="Logo-alura" id="a-alura" />
     <div class="container">
       <div class="left-section">
-        <input
-          type="text"
-          id="inputTexto"
-          placeholder="Ingrese el texto aquí"
-          autocomplete="off"
-        />
-        <div>
-          <img
-            src="images/bi_exclamation-circle-fill.png"
-            alt="exclamation"
-            id="exclamation"
-          />Solo letras minúsculas y sin acentos
-        </div>
-        <div class="buttons">
-          <button onclick="encriptarTexto()" class="conrelleno">
-            Encriptar
-          </button>
-          <button onclick="desencriptarTexto()" class="sinrelleno">
-            Desencriptar
-          </button>
+        <div id="encript-zone">
+          <textarea
+            type="text"
+            id="inputTexto"
+            placeholder="Ingrese el texto aquí"
+            autocomplete="off"
+          ></textarea>
+          <div>
+            <div id="adviser">
+              <img
+                src="images/bi_exclamation-circle-fill.png"
+                alt="exclamation"
+                id="exclamation"
+              />
+              <p class="ad">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="buttons">
+              <button onclick="encriptarTexto()" class="conrelleno">
+                Encriptar
+              </button>
+              <button onclick="desencriptarTexto()" class="sinrelleno">
+                Desencriptar
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       <div class="right-section">
@@ -39,14 +44,16 @@
           <h2>Ningún mensaje fue encontrado</h2>
           <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
         </div>
-        <textarea
-          id="outputTexto"
-          placeholder="Ingresa el texto que deseas encriptar o desencriptar"
-          readonly
-        ></textarea>
-        <button id="btncopiar" onclick="copiarClipboard()" class="sinrelleno">
-          Copiar
-        </button>
+        <div id="found">
+          <textarea
+            id="outputTexto"
+            placeholder="Ingresa el texto que deseas encriptar o desencriptar"
+            readonly
+          ></textarea>
+          <button id="btncopiar" onclick="copiarClipboard()" class="sinrelleno">
+            Copiar
+          </button>
+        </div>
       </div>
     </div>
     <script src="app.js"></script>

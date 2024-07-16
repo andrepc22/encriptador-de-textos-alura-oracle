@@ -15,22 +15,14 @@ body {
   margin-top: 30px;
 }
 
-h1 {
-  color: #333;
-}
-
 .container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  height: 850px;
 }
 
-.left-section,
-.right-section {
-  margin: 10px;
-}
-
-input {
+#inputTexto {
   width: 700px;
   margin: 10px 0;
   border: none;
@@ -40,22 +32,16 @@ input {
   color: #0a3871;
 }
 
-input::placeholder {
+#inputTexto::placeholder {
   color: #0a3871;
-}
-
-input:focus {
-  outline: none;
 }
 
 button {
   cursor: pointer;
   margin-right: 10px;
   width: 330px;
-  padding: 15px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 15px;
+  padding: 20px;
+  border-radius: 20px;
   font-size: 16px;
 }
 
@@ -66,16 +52,10 @@ button {
   border: 1px solid #0a3871;
 }
 
-.conrelleno:hover {
-  color: #0a3871;
-  background-color: #f3f5fc;
-  border: 1px solid #0a3871;
-}
-
 .sinrelleno {
   color: #0a3871;
   border: 1px solid #0a3871;
-  background-color: #f3f5fc;
+  background-color: rgba(0, 0, 0, 0);
   transition: ease 0.3s;
 }
 
@@ -91,36 +71,76 @@ button {
 }
 
 .right-section {
-  display: flex;
-  flex-direction: column;
+  width: 400px;
+  height: 100%;
   background-color: white;
-  padding: 25px;
-  border-radius: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-section {
+  height: 100%;
+  display: flex;
+}
+
+#outputTexto {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 textarea {
-  width: 300px;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 15px;
-  font-size: 16px;
   resize: none;
-  height: 150px;
+  font-family: Arial, sans-serif;
+  height: 90%;
 }
 
 textarea:focus {
-  border-color: #007bff;
   outline: none;
 }
 
-/* Ocultar inicialmente */
-
-#btncopiar,
-#outputTexto {
-  display: none;
+#encript-zone {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
 }
 
 #not-found {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin: 25px;
+  text-align: center;
+}
+
+#adviser {
+  display: flex;
+  flex-direction: row;
+}
+
+.ad {
+  color: rgba(0, 0, 0, 0.5);
+  margin-left: 5px;
+}
+
+#exclamation {
+  width: auto;
+  height: 100%;
+  align-self: center;
+}
+
+#found {
+  display: none;
+  flex-direction: column;
+  height: 95%;
+  padding: 5px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }

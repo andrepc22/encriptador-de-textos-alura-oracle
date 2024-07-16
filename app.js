@@ -1,9 +1,11 @@
 function encriptarTexto() {
   const texto = document.getElementById("inputTexto").value;
-  const textoEncrip = encriptar(texto);
-  //   console.log(textoEncrip);
-  document.getElementById("outputTexto").value = textoEncrip;
-  mostrarElementos();
+  if (texto != "") {
+    const textoEncrip = encriptar(texto);
+    //   console.log(textoEncrip);
+    document.getElementById("outputTexto").value = textoEncrip;
+    mostrarElementos();
+  }
 }
 
 function encriptar(texto) {
@@ -36,10 +38,12 @@ function encriptar(texto) {
 
 function desencriptarTexto() {
   const texto = document.getElementById("inputTexto").value;
-  const textoEncrip = desencriptar(texto);
-  //   console.log(textoEncrip);
-  document.getElementById("outputTexto").value = textoEncrip;
-  mostrarElementos();
+  if (texto != "") {
+    const textoEncrip = desencriptar(texto);
+    //   console.log(textoEncrip);
+    document.getElementById("outputTexto").value = textoEncrip;
+    mostrarElementos();
+  }
 }
 
 function desencriptar(texto) {
@@ -66,7 +70,6 @@ function copiarClipboard() {
 // Mostrar elementos
 
 function mostrarElementos() {
-  document.getElementById("btncopiar").style.display = "block";
-  document.getElementById("outputTexto").style.display = "block";
+  document.getElementById("found").style.display = "flex";
   document.getElementById("not-found").style.display = "none";
 }
