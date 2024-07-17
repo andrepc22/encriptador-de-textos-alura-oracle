@@ -1,7 +1,8 @@
 function encriptarTexto() {
   const texto = document.getElementById("inputTexto").value;
   if (texto != "") {
-    const textoEncrip = encriptar(texto);
+    const lowertext = texto.toLowerCase();
+    const textoEncrip = encriptar(lowertext);
     //   console.log(textoEncrip);
     document.getElementById("outputTexto").value = textoEncrip;
     mostrarElementos();
@@ -39,7 +40,8 @@ function encriptar(texto) {
 function desencriptarTexto() {
   const texto = document.getElementById("inputTexto").value;
   if (texto != "") {
-    const textoEncrip = desencriptar(texto);
+    const lowertext = texto.toLowerCase();
+    const textoEncrip = desencriptar(lowertext);
     //   console.log(textoEncrip);
     document.getElementById("outputTexto").value = textoEncrip;
     mostrarElementos();

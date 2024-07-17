@@ -30,6 +30,7 @@ body {
   font-size: 25px;
   background: none;
   color: #0a3871;
+  text-transform: lowercase;
 }
 
 #inputTexto::placeholder {
