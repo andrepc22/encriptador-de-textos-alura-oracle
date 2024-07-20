@@ -1,7 +1,7 @@
 function encriptarTexto() {
   const texto = document.getElementById("inputTexto").value;
   if (texto != "") {
-    const lowertext = texto.toLowerCase().replace(/[^a-z0-9]+/g, "");
+    const lowertext = texto.toLowerCase().replace(/[^a-z0-9\s]+/g, "");
     const textoEncrip = encriptar(lowertext);
     document.getElementById("outputTexto").value = textoEncrip;
     mostrarElementos();
@@ -39,7 +39,7 @@ function encriptar(texto) {
 function desencriptarTexto() {
   const texto = document.getElementById("inputTexto").value;
   if (texto != "") {
-    const lowertext = texto.toLowerCase().replace(/[^a-z0-9]+/g, "");
+    const lowertext = texto.toLowerCase().replace(/[^a-z0-9\s]+/g, "");
     const textoEncrip = desencriptar(lowertext);
     document.getElementById("outputTexto").value = textoEncrip;
     mostrarElementos();
@@ -80,7 +80,7 @@ function avoidCharEsp() {
     .addEventListener("input", (e) => {
       const input = e.target;
       const liveText = input.value;
-      const valorValid = liveText.toLowerCase().replace(/[^a-z0-9]+/g, "");
+      const valorValid = liveText.toLowerCase().replace(/[^a-z0-9\s]+/g, "");
       input.value = valorValid;
     });
 }
