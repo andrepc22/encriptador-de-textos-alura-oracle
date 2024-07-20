@@ -2,7 +2,6 @@ function encriptarTexto() {
   const texto = document.getElementById("inputTexto").value;
   if (texto != "") {
     const lowertext = texto.toLowerCase().replace(/[^a-z0-9]+/g, "");
-    // console.log(lowertext);
     const textoEncrip = encriptar(lowertext);
     document.getElementById("outputTexto").value = textoEncrip;
     mostrarElementos();
@@ -54,7 +53,6 @@ function desencriptar(texto) {
 
   for (let i = 0; i < 5; i++) {
     resultado = resultado.replaceAll(llaves[i], vocales[i]);
-    // console.log(resultado);
   }
 
   return resultado;
@@ -65,7 +63,6 @@ function desencriptar(texto) {
 function copiarClipboard() {
   const texto = document.getElementById("outputTexto").value;
   navigator.clipboard.writeText(texto);
-  //   console.log(texto);
 }
 
 // Mostrar elementos
@@ -74,3 +71,18 @@ function mostrarElementos() {
   document.getElementById("found").style.display = "flex";
   document.getElementById("not-found").style.display = "none";
 }
+
+// Evitar caracteres especiales
+
+function avoidCharEsp() {
+  const text = document
+    .getElementById("inputTexto")
+    .addEventListener("input", (e) => {
+      const input = e.target;
+      const liveText = input.value;
+      const valorValid = liveText.toLowerCase().replace(/[^a-z0-9]+/g, "");
+      input.value = valorValid;
+    });
+}
+
+avoidCharEsp();
